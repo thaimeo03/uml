@@ -1,0 +1,60 @@
+// {type:usecase}
+// {direction:leftToRight}
+// {generate:true}
+
+[Admin blogger]^[Blogger]
+
+[Admin blogger]-(Manage bloggers)
+(Manage bloggers)>(Grant permissions)
+(Manage bloggers)>(Delete violating accounts)
+
+[Admin blogger]-(Manage blogs)
+(Manage blogs)>(Approve blog)
+(Manage blogs)>(Delete comments)
+(Manage blogs)>(Hide comments)
+
+[Admin blogger]-(Statictics)
+(Statictics)>(Count blogs)
+(Statictics)>(Count number of visits)
+
+// [Blogger]-(Login)
+// (Login)<(Register)
+// (Login)<(Forgot password)
+// (Login)<(Logout)
+
+// [Blogger]-(Manage blog)
+// (Manage blog)>(Create a blog)
+// (Manage blog)>(Read blog)
+// (Manage blog)>(Update blog)
+// (Manage blog)>(Delete blog)
+// (Manage blog)>(Find blog)
+
+// // (Read blog)<(Comment)
+// // (Read blog)<(Like blog)
+// // (Read blog)<(Share blog)
+// // (Read blog)<(Hide blog)
+
+// [Blogger]-(Interact with blog)
+// (Interact with blog)>(Read blog)
+// (Interact with blog)>(Comment)
+// (Interact with blog)>(Hide blog)
+// (Interact with blog)>(Like)
+// (Interact with blog)>(Share blog)
+
+// [Blogger]-(Update profile)
+
+// [Blogger]-(Report violating accounts)
+
+// (Approve blog)<(Interact with blog)
+
+// (Login)<(Manage users)
+// (Login)<(Manage blogs)
+// (Login)<(Statictics)
+
+// (Login)<(Interact with blog)
+// (Login)<(Comment)
+// (Login)<(Like)
+// (Login)<(Hide blog)
+// (Login)<(Share blog)
+// (Login)<(Update profile)
+// (Login)<(Report violating accounts)

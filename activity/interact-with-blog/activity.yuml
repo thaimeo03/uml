@@ -1,0 +1,16 @@
+// {type:activity}
+// {generate:true}
+
+(start)->(Interact with blog)->(Read blog)->|a|
+
+|a|->(Like)
+|a|->(Comment)
+|a|->(Share)
+|a|->(Hide blog)
+
+(Like)->|b|
+(Comment)->|b|
+(Share)->|b|
+(Hide blog)->|b|
+
+|b|->(end)

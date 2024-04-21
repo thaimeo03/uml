@@ -1,0 +1,8 @@
+// {type:class}
+// {direction:leftToRight}
+// {generate:true}
+
+[Blogger|id;name;email;password;avatar;address;birthday;refreshToken;createdAt;updatedAt|]^[Blog Admin||]
+[Blogger||]<>1-have 0..*>[Blog|id;title;thumbnail;content;status;createdAt;updatedAt|]
+[Blog||]<>1-have 0..*>[Comment|id;content;createdAt|]
+[Image|id;url;public_id|]

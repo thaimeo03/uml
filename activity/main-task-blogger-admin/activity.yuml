@@ -1,0 +1,39 @@
+// {type:activity}
+// {generate:true}
+
+// (start)->(login)-><login condition>[is authenticated]->|a|
+// <login condition>[not authenticated]->(end)
+
+// |a|->(Manage bloggers)
+// |a|->(Manage blogs)
+// |a|->(Statictics)
+
+// (Manage bloggers)->|b|
+// |b|->(Grant permission)
+// |b|-><admin condtion>[is not admin role]->(Delete violating accounts)
+
+// (Manage blogs)->|c|
+// |c|->(Approve blogs)
+// |c|->(Hide comments)
+// |c|->(Delete comments)
+
+// (Statictics)->|d|
+// |d|->(Count blogs)
+// |d|->(Count number of visits)
+
+// (Manage bloggers)->|e|
+// // (Manage blogs)->|e|
+// (Statictics)->|e|
+
+// |e|-><is logout>[is logout]->(end)
+
+(start) -> (Manage blogs) -> (Approve blog)
+(Approve blog) -> |a|
+|a| -> (Hide comments)
+|a| -> |e|
+(Hide comments) -> |e|
+(Hide comments) -> |b|
+|b| -> (Delete comments)
+|b| -> |e|
+
+|e|-><is logout>[is logout]->(end)

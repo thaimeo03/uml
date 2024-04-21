@@ -1,0 +1,17 @@
+// {type:activity}
+// {generate:true}
+
+(start)->(Login)-><a>[is authenticated]->|b|
+<a>[not authenticated]->(end)
+
+|b|->(Manage blog)
+|b|->(Interact with blog)
+|b|->(Update profile)
+|b|->(Report violating accounts)
+
+(Manage blog)->|c|
+(Interact with blog)->|c|
+(Update profile)->|c|
+(Report violating accounts)->|c|
+
+|c|-><d>[is Logout]->(end)

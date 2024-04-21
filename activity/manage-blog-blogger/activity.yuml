@@ -1,0 +1,13 @@
+// {type:activity}
+// {generate:true}
+
+
+(start)->(Manage blog)->(Create blog)->|a|
+
+|a|->(Update blog)
+|a|->(Delete blog)
+
+(Update blog)->|b|
+(Delete blog)->|b|
+
+|b|->(end)
